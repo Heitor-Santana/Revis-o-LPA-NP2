@@ -1,0 +1,31 @@
+algoritmo "Primeiro Programa"
+
+var
+  SalLiq: real
+  SalBru: real
+  Inss: real
+inicio
+
+  escreval("Digite seu nome: ")
+  leia(SalBru)
+  se SalBru <= 1621 entao
+    Inss <- SalBru * 0.075
+    SalLiq <- SalBru - Inss
+  senao 
+    se SalBru <= 2902 entao
+      inss <- (SalBru * 0.09) - 24
+      SalLiq <- SalBru - Inss
+    senao 
+      se SalBru <= 4354 entao
+        inss <- (SalBru * 0.12) - 111
+        SalLiq <- SalBru - Inss
+      senao
+        inss <- (SalBru * 0.14) - 198
+        SalLiq <- SalBru - Inss
+      fimse
+    fimse
+  fimse
+  escreval("Seu salário bruto: R$", SalBru )
+  escreval("Seu salário liquido: R$", SalLiq)
+
+fimalgoritmo
